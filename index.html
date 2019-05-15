@@ -12,7 +12,7 @@
 		}
 		AFRAME.registerComponent('play', {
 			init: function () {
-				var entity = document.querySelector('#musplayer');
+				var entity = document.querySelector('#floor0');
 				this.el.addEventListener('click', function() {
 					entity.components.sound.playSound();
 					console.log('Playback resumed successfully');
@@ -21,7 +21,7 @@
 		});
 		AFRAME.registerComponent('pause', {
 			init: function () {
-				var entity = document.querySelector('#musplayer');
+				var entity = document.querySelector('#floor0');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.pauseSound();
 					console.log('Playback resumed successfully');
@@ -30,36 +30,7 @@
 		});
 		AFRAME.registerComponent('stop', {
 			init: function () {
-				var entity = document.querySelector('#musplayer');
-				this.el.addEventListener('click', function () {
-					entity.components.sound.stopSound();
-					console.log('Playback resumed successfully');
-				});
-			}
-		});
-
-
-		AFRAME.registerComponent('play', {
-			init: function () {
-				var entity = document.querySelector('#musplayer');
-				this.el.addEventListener('click', function() {
-					entity.components.sound.playSound();
-					console.log('Playback resumed successfully');
-				});
-			}
-		});
-		AFRAME.registerComponent('pause', {
-			init: function () {
-				var entity = document.querySelector('#musplayer');
-				this.el.addEventListener('click', function () {
-					entity.components.sound.pauseSound();
-					console.log('Playback resumed successfully');
-				});
-			}
-		});
-		AFRAME.registerComponent('stop', {
-			init: function () {
-				var entity = document.querySelector('#musplayer');
+				var entity = document.querySelector('#floor0');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.stopSound();
 					console.log('Playback resumed successfully');
@@ -69,7 +40,7 @@
 		
 	AFRAME.registerComponent('play-pause', {
 			init: function () {
-				var myVideo = document.querySelector('#potavid');
+				var myVideo = document.querySelector('#avid');
 				var videoControls = document.querySelector('#videoControls');
 				this.el.addEventListener('click', function () {
 					if (myVideo.paused) {
@@ -133,16 +104,16 @@
 		<!-- <a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0" stop></a-entity> -->
 		<!-- </a-entity> -->
 	<a-image position="-6 0 -44"  id="button0" src="#note1"
-	event-set__tarvis="_event: click; _target: #floor0; position: -6 10 -44" 
-	event-set__resvis="_event: click; _target: #avid; position: -6 10 -44">
+	event-set__tarvis="_event: click; _target: #floor0; position: -6 -12 -44" 
+	event-set__resvis="_event: click; _target: #avid; position: -6 -12 -44">
 	</a-image>
 	<a-image position="-6 1 -44"  id="button1" src="#volume"
-	event-set__tarvis="_event: click; _target: #floor0; position: 0 -10 -44" 
+	event-set__tarvis="_event: click; _target: #floor0; position: 0 -12 -44" 
 	event-set__resvis="_event: click; _target: #avid; position: 0 0 -44" stop>
 	</a-image>
 	<a-image position="-6 -1 -44"  id="button2" src="#video1"
 	event-set__tarvis="_event: click; _target: #floor0; position: 0 0 -44" 
-	event-set__resvis="_event: click; _target: #avid; position: 0 -10 -44" stop01>
+	event-set__resvis="_event: click; _target: #avid; position: 0 -12 -44" stop01>
 	</a-image>
 	
 	<!-- <a-image material="src:#mufloor" scale="7 7 7" id="imgfloor" position="0.25 -10 -7.5"></a-image> -->
