@@ -108,6 +108,7 @@
 	<img id="volume" src="img/volume.png">
 	<img id="play" src="img/play.png">
     <img id="pause" src="img/pause.png">
+	<img id="video1" src="img/videoplayer.png">
 	<!-- 音效 -->
 	<audio id="mus" src="mus/mus.mp3"></audio>
 	<audio id="pota" src="mus/保生大帝.mp3">
@@ -125,11 +126,31 @@
 	<a-sky radius="10" src="#2" position="-40 0 -40" rotation="0 90 0"></a-sky>
 	<a-sky radius="10" src="#4" position="40 0 -40" rotation="0 270 0"></a-sky>
 		<!-- 音樂播放器 -->
-		<a-entity geometry="primitive: circle; radius: 0.45" material="src:#volume"  id="musplayer" position="-6 0 -44" rotation="0 38 0" sound="src: #pota">
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play></a-entity>
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0" pause></a-entity>
-		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0" stop></a-entity>
-		</a-entity>
+		<!-- <a-entity geometry="primitive: circle; radius: 0.45" material="src:#volume"  id="musplayer" position="-6 0 -44" rotation="0 38 0" sound="src: #pota"> -->
+		<!-- <a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play></a-entity> -->
+		<!-- <a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0" pause></a-entity> -->
+		<!-- <a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0" stop></a-entity> -->
+		<!-- </a-entity> -->
+	<a-image position="-6 0 -44"  id="button0" src="#note1"
+	event-set__tarvis="_event: click; _target: #floor0; position: -6 10 -44" 
+	event-set__resvis="_event: click; _target: #avid; position: -6 10 -44">
+	</a-image>
+	<a-image position="-6 1 -44"  id="button1" src="#volume"
+	event-set__tarvis="_event: click; _target: #floor0; position: -6 -10 -44" 
+	event-set__resvis="_event: click; _target: #avid; position: -6 0 -44" stop>
+	</a-image>
+	<a-image position="-6 -1 -44"  id="button2" src="#video1"
+	event-set__tarvis="_event: click; _target: #floor0; position: -6 0 -44" 
+	event-set__resvis="_event: click; _target: #avid; position: -6 -10 -44" stop01>
+	</a-image>
+	
+	<!-- <a-image material="src:#mufloor" scale="7 7 7" id="imgfloor" position="0.25 -10 -7.5"></a-image> -->
+	<!-- <a-image material="src:#muflooren" scale="7 7 7" id="imgflooren" position="0.25 -10 -7.5"></a-image> -->
+	<a-entity id="floor0" position="-6 10 -44" rotation="0 0 0" sound="src: #pota">
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -2.5 2" play></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -2.5 2"  pause></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -2.5 2"  stop></a-entity>
+	</a-entity>
 	
 		<!-- 導覽顯現消失 -->
 		
@@ -144,12 +165,12 @@
 		
 		<!-- 播放影片 -->
 		
-		<!-- <a-video src="#YOUR-VIDEO-ID" width="8" height="4.5" position="0 3 8" id="avid" visible="false"> -->
+		<a-video src="#YOUR-VIDEO-ID" width="8" height="4.5" position="-6 10 -44" id="avid">
 			<!-- Play/Pause -->
-			<!-- <a-image id="videoControls" src="#play" position="0 -3 0" scale="0.5 0.5 1" rotation="0 180 0" -->
-					 <!-- play-pause> -->
-			<!-- </a-image> -->
-		<!-- </a-video> -->
+			<a-image id="videoControls" src="#play" position="0 -3 0" scale="0.5 0.5 1" rotation="0 180 0"
+					 play-pause>
+			</a-image>
+		</a-video>
 		<!-- <a-image src="#playmu" position="2 0 8" look-at="cam-ra" event-set__tarvis="_event: click; _target: #avid; visible: true" rotation="0 180 0"> -->
 		<!-- </a-image> -->
 		<!-- <a-image src="#stopmu" position="-2 0 8" look-at="cam-ra" event-set__tarvis="_event: click; _target: #avid; visible: false" rotation="0 180 0"> -->
