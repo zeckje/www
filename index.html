@@ -7,6 +7,38 @@
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 	<script src="https://polyfill.io/v3/polyfill.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<script>
+		window.onload = function() {
+		var context = new AudioContext();
+		}
+		AFRAME.registerComponent('play', {
+			init: function () {
+				var entity = document.querySelector('#floor0');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.playSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('pause', {
+			init: function () {
+				var entity = document.querySelector('#floor0');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.pauseSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+		AFRAME.registerComponent('stop', {
+			init: function () {
+				var entity = document.querySelector('#floor0');
+				this.el.addEventListener('click', function () {
+					entity.components.sound.stopSound();
+					console.log('Playback resumed successfully');
+				});
+			}
+		});
+	</script>
 </head>
 <body>
 <a-scene>
@@ -69,6 +101,10 @@
 	<img id="under5" src="img/B1/5.jpg">
 	<img id="under6" src="img/B1/6.jpg">
 	<img id="under7" src="img/B1/7.jpg">
+	<img id="C01" src="img/B1/C01.jpg">
+	<img id="C02" src="img/B1/C02.jpg">
+	<img id="D02" src="img/B1/D02.jpg">
+	<img id="D03" src="img/B1/D03.jpg">
 	</a-assets>
 	<!-- <a-sky radius="10" src="#" position="" rotation="0 90 0" ></a-sky> -->
 	<!-- 1F -->
@@ -281,6 +317,10 @@
 	<a-sky radius="10" src="#under5" position="0 -20 100" rotation="0 90 0" ></a-sky>
 	<a-sky radius="10" src="#under6" position="0 -20 120" rotation="0 90 0" ></a-sky>
 	<a-sky radius="10" src="#under7" position="0 -20 140" rotation="0 90 0" ></a-sky>
+	<a-sky radius="10" src="#C01" position="20 -20 120" rotation="0 90 0" ></a-sky>
+	<a-sky radius="10" src="#C02" position="20 -20 100" rotation="0 90 0" ></a-sky>
+	<a-sky radius="10" src="#D02" position="-20 -20 100" rotation="0 90 0" ></a-sky>
+	<a-sky radius="10" src="#D03" position="-20 -20 80" rotation="0 90 0" ></a-sky>
 	
 	<!--under0-->
 	<a-image src="#arrow" position="-23 -3 0" scale="1 1 1" rotation="90 200 0" checkpoint="offset: 23 -17 0" look-at="#cam-rig" material="" geometry=""></a-image>
@@ -317,10 +357,14 @@
 	<a-image src="#arrow" position="-3 -23 140" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -17 23 0" look-at="#cam-rig" material="" geometry=""></a-image>
 	<!--Rfloor-->
 	<a-image src="#arrow" position="3 -23 140" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 17 23 0" look-at="#cam-rig" material="" geometry=""></a-image>
-
-	
-	
-	
+    <!--C01-->
+	<a-image src="#arrow" position="5.2 -23 120" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
+	<!--C02-->
+	<a-image src="#arrow" position="5.2 -23 100" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
+	<!--D02-->
+	<a-image src="#arrow" position="-5.2 -23 100" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
+	<!--D02-->
+	<a-image src="#arrow" position="-5.2 -23 80" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
 	
 	<!--相機-->
 	<a-entity id="cam-rig"
