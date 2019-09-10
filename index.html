@@ -5,108 +5,11 @@
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
 	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
-	<script src="https://polyfill.io/v3/polyfill.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-	<!-- <script> -->
-		<!-- window.onload = function() { -->
-		<!-- setTimeout(function() {    -->
-    
-        <!-- // reference to <head>           -->
-        <!-- var head = document.getElementsByTagName('head')[0];    -->
-    
-        <!-- // a new CSS            -->
-        <!-- var css = document.createElement('link');    -->
-        <!-- css.type = "text/css";    -->
-        <!-- css.rel  = "stylesheet";    -->
-        <!-- css.href = "http://domain.tld/preload.css";    -->
-    
-        <!-- // a new JS            -->
-        <!-- var js  = document.createElement("script");    -->
-        <!-- js.type = "text/javascript";    -->
-        <!-- js.src  = "http://domain.tld/preload.js";    -->
-    
-        <!-- // preload JS and CSS         head.appendChild(css);    -->
-        <!-- head.appendChild(js);    -->
-    
-        <!-- // preload image            -->
-        <!-- new Image().src = "https://github.com/zeckje/www/blob/master/img/1F/A1.jpg";    -->
-    
-    <!-- }, 1000);    -->
-		<!-- }; -->
-	<!-- </script> -->
-	<!-- <script language="JavaScript"> -->
-<!-- function preloader() -->
-<!-- { -->
-<!-- // counter -->
-<!-- var i = 0; -->
-<!-- // create object -->
-<!-- imageObj = new Image(); -->
-<!-- // set image list -->
-<!-- images = new Array(); -->
-<!-- images[0]="img/1F/maindoor.jpg" -->
-<!-- images[1]="img/1F/frontdoor.jpg" -->
-<!-- images[2]="img/1F/leftfloor.jpg" -->
-<!-- images[3]="img/1F/grocerystore.jpg" -->
-<!-- images[4]="img/1F/grocerystore1.jpg" -->
-<!-- images[5]="img/1F/B4.jpg" -->
-<!-- images[6]="img/1F/lmidfloor.jpg" -->
-<!-- images[7]="img/1F/B3.jpg" -->
-<!-- images[8]="img/1F/B2.jpg" -->
-<!-- images[9]="img/1F/B1.jpg" -->
-<!-- images[10]="img/1F/lbackdoor.jpg" -->
-<!-- images[11]="img/1F/backdoor.jpg" -->
-<!-- images[12]="img/1F/rbackdoor.jpg" -->
-<!-- images[13]="img/1F/A3.jpg" -->
-<!-- images[14]="img/1F/A31.jpg" -->
-<!-- images[15]="img/1F/A2b.jpg" -->
-<!-- images[16]="img/1F/A2b1.jpg" -->
-<!-- images[17]="img/1F/A2.jpg" -->
-<!-- images[18]="img/1F/A21.jpg" -->
-<!-- images[19]="img/1F/A22.jpg" -->
-<!-- images[20]="img/1F/rmidfloor.jpg" -->
-<!-- images[21]="img/1F/A1.jpg" -->
-<!-- images[22]="img/1F/A11.jpg" -->
-<!-- images[23]="img/1F/midgallery.jpg" -->
-<!-- images[24]="img/1F/rightfloor.jpg" -->
-<!-- images[25]="img/2F/A4.jpg" -->
-<!-- images[26]="img/2F/A5.jpg" -->
-<!-- images[27]="img/2F/A6.jpg" -->
-<!-- images[28]="img/2F/A7.jpg" -->
-<!-- images[29]="img/2F/A8.jpg" -->
-<!-- images[30]="img/2F/A9.jpg" -->
-<!-- images[31]="img/2F/lbridge.jpg" -->
-<!-- images[32]="img/2F/lmidfloor2.jpg" -->
-<!-- images[33]="img/2F/midbridge.jpg" -->
-<!-- images[34]="img/2F/rbridge.jpg" -->
-<!-- images[35]="img/2F/B5.jpg" -->
-<!-- images[36]="img/2F/B6.jpg" -->
-<!-- images[37]="img/2F/B7.jpg" -->
-<!-- images[38]="img/2F/B8.jpg" -->
-<!-- images[39]="img/2F/rmidfloor2.jpg" -->
-<!-- images[40]="img/B1/0.jpg" -->
-<!-- images[41]="img/B1/1.jpg" -->
-<!-- images[42]="img/B1/2.jpg" -->
-<!-- images[43]="img/B1/3.jpg" -->
-<!-- images[44]="img/B1/4.jpg" -->
-<!-- images[45]="img/B1/5.jpg" -->
-<!-- images[46]="img/B1/6.jpg" -->
-<!-- images[47]="img/B1/7.jpg" -->
-<!-- images[48]="img/B1/C01.jpg" -->
-<!-- images[49]="img/B1/C02.jpg" -->
-<!-- images[50]="img/B1/D02.jpg" -->
-<!-- images[51]="img/B1/D03.jpg" -->
-
-<!-- // start preloading -->
-<!-- for(i=0; i<=3; i ) -->
-<!-- { -->
-<!-- imageObj.src=images[i]; -->
-<!-- } -->
-<!-- } -->
-<!-- </script> -->
 </head>
 <body>
 <a-scene>
-	<a-assets>
+	<a-assets timeout="8000">
 	<!-- <img id="" src="img/1F/"> -->
 	<!-- 球形圖1F -->
 	<img id="maindoor" src="img/1F/maindoor.jpg" >
