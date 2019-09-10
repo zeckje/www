@@ -7,33 +7,33 @@
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 	<script src="https://polyfill.io/v3/polyfill.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-	<script>
-		window.onload = function() {
-		setTimeout(function() {   
+	<!-- <script> -->
+		<!-- window.onload = function() { -->
+		<!-- setTimeout(function() {    -->
     
-        // reference to <head>          
-        var head = document.getElementsByTagName('head')[0];   
+        <!-- // reference to <head>           -->
+        <!-- var head = document.getElementsByTagName('head')[0];    -->
     
-        // a new CSS           
-        var css = document.createElement('link');   
-        css.type = "text/css";   
-        css.rel  = "stylesheet";   
-        css.href = "http://domain.tld/preload.css";   
+        <!-- // a new CSS            -->
+        <!-- var css = document.createElement('link');    -->
+        <!-- css.type = "text/css";    -->
+        <!-- css.rel  = "stylesheet";    -->
+        <!-- css.href = "http://domain.tld/preload.css";    -->
     
-        // a new JS           
-        var js  = document.createElement("script");   
-        js.type = "text/javascript";   
-        js.src  = "http://domain.tld/preload.js";   
+        <!-- // a new JS            -->
+        <!-- var js  = document.createElement("script");    -->
+        <!-- js.type = "text/javascript";    -->
+        <!-- js.src  = "http://domain.tld/preload.js";    -->
     
-        // preload JS and CSS         head.appendChild(css);   
-        head.appendChild(js);   
+        <!-- // preload JS and CSS         head.appendChild(css);    -->
+        <!-- head.appendChild(js);    -->
     
-        // preload image           
-        new Image().src = "https://github.com/zeckje/www/blob/master/img/1F/A1.jpg";   
+        <!-- // preload image            -->
+        <!-- new Image().src = "https://github.com/zeckje/www/blob/master/img/1F/A1.jpg";    -->
     
-    }, 1000);   
-		};
-	</script>
+    <!-- }, 1000);    -->
+		<!-- }; -->
+	<!-- </script> -->
 	<!-- <script language="JavaScript"> -->
 <!-- function preloader() -->
 <!-- { -->
@@ -109,7 +109,7 @@
 	<a-assets>
 	<!-- <img id="" src="img/1F/"> -->
 	<!-- 球形圖1F -->
-	<!-- <img id="maindoor" src="img/1F/maindoor.jpg" > -->
+	<img id="maindoor" src="img/1F/maindoor.jpg" >
 	<img id="frontdoor" src="img/1F/frontdoor.jpg" >
 	<img id="leftfloor" src="img/1F/leftfloor.jpg">
 	<img id="grocerystore" src="img/1F/grocerystore.jpg">
@@ -172,7 +172,7 @@
 	</a-assets>
 	<!-- <a-sky radius="10" src="#" position="" rotation="0 90 0" ></a-sky> -->
 	<!-- 1F -->
-	<a-sky radius="10" src="https://github.com/zeckje/www/blob/master/img/1F/A1.jpg" position="0 0 0" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#maindoor" position="0 0 0" rotation="0 270 0" ></a-sky>
 	<a-sky radius="10" src="#frontdoor" position="-10 0 -17" rotation="0 90 0" ></a-sky>
 	<a-sky radius="10" src="#leftfloor" position="-20 0 0" rotation="0 270 0" ></a-sky>
 	<a-sky radius="10" src="#grocerystore" position="-20 0 20" rotation="0 270 0" ></a-sky>
