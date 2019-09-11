@@ -7,12 +7,16 @@
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<script>
+	window.onload = function() {
+		var context = new AudioContext();
+		var data-raycastable = new raycastable();
+		}
 AFRAME.registerComponent('do-something', {
   init: function () {
     var sceneEl = this.el;
 	this.el.addEventListener('loaded', function () {
 					sceneEl.components.do-something.loaded();
-					console.log('Playback resumed successfully');
+					console.log('loaded');
 				});
   }
 });
