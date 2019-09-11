@@ -7,7 +7,7 @@
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<script>
-	var scene = document.querySelector('a-scene');
+var scene = document.querySelector('a-scene');
 
 if (scene.hasLoaded) {
   run();
@@ -16,8 +16,8 @@ if (scene.hasLoaded) {
 }
 
 function run () {
-  var sky = scene.querySelector('a-sky');
-  sky.setAttribute('material', 'color', 'red');
+  var entity = scene.querySelector('a-entity');
+  entity.setAttribute('material', 'color', 'red');
 }
 	</script>
 </head>
