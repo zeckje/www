@@ -11,11 +11,11 @@
 		var context = new AudioContext();
 		var data-raycastable = new raycastable();
 		}
-AFRAME.registerComponent('do-something', {
+AFRAME.registerComponent('dosomething', {
   init: function () {
     var sceneEl = this.el;
 	this.el.addEventListener('loaded', function () {
-					sceneEl.components.do-something.loaded();
+					sceneEl.components.hasloaded();
 					console.log('loaded');
 				});
   }
