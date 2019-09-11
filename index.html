@@ -7,23 +7,20 @@
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<script>
-var scene = document.querySelector('a-scene');
-
-if (scene.hasLoaded) {
-  run();
-} else {
-  scene.addEventListener('loaded', run);
-}
-
-function run () {
-  var entity = scene.querySelector('a-entity');
-  entity.setAttribute('material', 'color', 'red');
-}
+AFRAME.registerComponent('do-something', {
+  init: function () {
+    var sceneEl = this.el;
+	this.el.addEventListener('loaded', function () {
+					sceneEl.components.do-something.loaded();
+					console.log('Playback resumed successfully');
+				});
+  }
+});
 	</script>
 </head>
 <body>
 
-<a-scene>
+<a-scene do-something>
 	<a-assets>
 	<!-- <img id="" src="img/1F/"> -->
 	<!-- 球形圖1F -->
@@ -332,7 +329,7 @@ function run () {
 				  event-set__end="_target: #blink; _event: navigation-end;
 				  				  animation.to: 0">
 			<!-- 相機控制 -->
-			<a-entity progressive-controls>
+			<a-entity progressive-controls >
 				<a-camera>
 					<a-image id="blink" src="#black" cursor="fuse:true; fuseTimeout:1500" position="0 0 -0.3" opacity="0" height="100%" width="100%">
 					</a-image>
