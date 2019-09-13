@@ -6,25 +6,10 @@
 	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-	<script>
-	window.onload = function() {
-		var context = new AudioContext();
-		var data-raycastable = new raycastable();
-		}
-AFRAME.registerComponent('dosomething', {
-  init: function () {
-    var sceneEl = this.el;
-	this.el.addEventListener('loaded', function () {
-					sceneEl.components.hasloaded();
-					console.log('loaded');
-				});
-  }
-});
-	</script>
 </head>
 <body>
 
-<a-scene do-something>
+<a-scene>
 	<a-assets>
 	<!-- <img id="" src="img/1F/"> -->
 	<!-- 球形圖1F -->
@@ -53,39 +38,10 @@ AFRAME.registerComponent('dosomething', {
 	<img id="A1-1" src="img/1F/A11.jpg">
 	<img id="midgallery" src="img/1F/midgallery.jpg">
 	<img id="rightfloor" src="img/1F/rightfloor.jpg">
-	<!--2F-->
-	<img id="A4" src="img/2F/A4.jpg">
-	<img id="A5" src="img/2F/A5.jpg">
-	<img id="A6" src="img/2F/A6.jpg">
-	<img id="A7" src="img/2F/A7.jpg">
-	<img id="A8" src="img/2F/A8.jpg">
-	<img id="A9" src="img/2F/A9.jpg">
-	<img id="lbridge" src="img/2F/lbridge.jpg">
-	<img id="lmidfloor2" src="img/2F/lmidfloor2.jpg">
-	<img id="midbridge" src="img/2F/midbridge.jpg">
-	<img id="rbridge" src="img/2F/rbridge.jpg">
-	<img id="B5" src="img/2F/B5.jpg">
-	<img id="B6" src="img/2F/B6.jpg">
-	<img id="B7" src="img/2F/B7.jpg">
-	<img id="B8" src="img/2F/B8.jpg">
-	<img id="rmidfloor2" src="img/2F/rmidfloor2.jpg">
 	<!--箭頭-->
 	<img id="arrow" src="img/png/arrow.png">
 	<!--轉場-->
 	<img id="black" src="img/png/black.png">
-	<!--地下室-->
-	<img id="under0" src="img/B1/0.jpg">
-	<img id="under1" src="img/B1/1.jpg">
-	<img id="under2" src="img/B1/2.jpg">
-	<img id="under3" src="img/B1/3.jpg">
-	<img id="under4" src="img/B1/4.jpg">
-	<img id="under5" src="img/B1/5.jpg">
-	<img id="under6" src="img/B1/6.jpg">
-	<img id="under7" src="img/B1/7.jpg">
-	<img id="C01" src="img/B1/C01.jpg">
-	<img id="C02" src="img/B1/C02.jpg">
-	<img id="D02" src="img/B1/D02.jpg">
-	<img id="D03" src="img/B1/D03.jpg">
 	</a-assets>
 	<!-- <a-sky radius="10" src="#" position="" rotation="0 90 0" ></a-sky> -->
 	<!-- 1F -->
@@ -116,7 +72,7 @@ AFRAME.registerComponent('dosomething', {
 	<a-sky radius="10" src="#rightfloor" position="20 0 0" rotation="0 270 0" ></a-sky>
 	<!--箭頭-->
 	<!--#leftfloor-->
-	<a-image src="#arrow" position="-6.5 -3 3" scale="1 1 1" rotation="90 -160 0" checkpoint="offset: -13.5 3 -3" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-6.5 -3 3" scale="1 1 1" rotation="90 -160 0" link="href:2F.html"></a-image>
 	<a-image src="#arrow" position="-17 -3 -1.7" scale="1 1 1" rotation="90 30 0" checkpoint="offset: 17 3 1.7" look-at="#cam-rig"></a-image>
 	
 	<!--#frontdoor-->
@@ -160,13 +116,13 @@ AFRAME.registerComponent('dosomething', {
 	<!--rmidfloor 綠色上樓未寫-->
 	<a-image src="#arrow" position="-13 -3 41" scale="1 1 1" rotation="90 -20 0" checkpoint="offset: 33 3 -1" look-at="#cam-rig"></a-image>
 	<a-image src="#arrow" position="-13 -3 58" scale="1 1 1" rotation="90 20 0" checkpoint="offset: 33 3 -18" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="23 -3 40" scale="1 1 1" rotation="90 10 0" checkpoint="offset: -3 23 20" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="23 -3 40" scale="1 1 1" rotation="90 10 0" link="href:2Frmidfloor.html" look-at="#cam-rig"></a-image>
 	<a-image src="#arrow" position="19.8 -3 54" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0.2 3 -14" look-at="#cam-rig"></a-image>
 	<!--lmidfloor-->
 	<a-image src="#arrow" position="-20 -3 44" scale="1 1 1" rotation="90 -79 0" checkpoint="offset: 0 3 16" look-at="#cam-rig"></a-image>
 	<a-image src="#arrow" position="-20.7 -3 73" scale="1 1 1" rotation="90 99 0" checkpoint="offset: 0.7 3 -13" look-at="#cam-rig"></a-image>
 	<a-image src="#arrow" position="12 -3 57.5" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -32 3 2.5" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="-23.3 -3 60" scale="1 1 1" rotation="90 190 0" checkpoint="offset: 3.3 23 0" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-23.3 -3 60" scale="1 1 1" rotation="90 190 0" link="href:2Flmidfloor.html" look-at="#cam-rig"></a-image>
 	<!--B3-->
 	<a-image src="#arrow" position="-19.6 -3 65" scale="1 1 1" rotation="90 -81 0" checkpoint="offset: -0.4 3 15" look-at="#cam-rig"></a-image>
 	<a-image src="#arrow" position="-21 -3 93" scale="1 1 1" rotation="90 100 0" checkpoint="offset: 1 3 -13" look-at="#cam-rig"></a-image>
@@ -201,126 +157,6 @@ AFRAME.registerComponent('dosomething', {
 	<!--A2b-1-->
 	<a-image src="#arrow" position="40 -3 84" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig"></a-image>
 	<a-image src="#arrow" position="23.5 -3.6 100.4" scale="1 1 1" rotation="90 10 0" checkpoint="offset: 16.5 3.6 -0.4" look-at="#cam-rig"></a-image>
-	<!--2F-->
-	<a-sky radius="10" src="#A4" position="20 20 0" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#A5" position="20 20 40" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#rmidfloor2" position="20 20 60" rotation="0 90 0" ></a-sky>
-	<a-sky radius="5" src="#A6" position="20 20 75" rotation="0 90 0" ></a-sky>
-	<a-sky radius="5" src="#A7" position="20 20 85" rotation="0 90 0" ></a-sky>
-	<a-sky radius="5" src="#A8" position="20 20 95" rotation="0 90 0" ></a-sky>
-	<a-sky radius="5" src="#A9" position="20 20 105" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#rbridge" position="20 20 20" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#midbridge" position="0 20 20" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#B8" position="-20 20 0" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#lbridge" position="-20 20 20" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#B7" position="-20 20 40" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#lmidfloor2" position="-20 20 60" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#B6" position="-20 20 80" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#B5" position="-20 20 100" rotation="0 90 0" ></a-sky>
-	
-	<!--lmidfloor2-->
-	<a-image src="#arrow" position="-25 16 60" scale="1 1 1" rotation="90 180 0" checkpoint="offset: 5 -16 0" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="-19.5 16 74" scale="1 1 1" rotation="90 90 0" checkpoint="offset: -0.5 4 -14" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="-21 16 46" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 1 4 14" look-at="#cam-rig"></a-image>
-	<!-- B6種子基地-->
-	<a-image src="#arrow" position="-20 16 65" scale="1 1 1" rotation="90 -90 0" checkpoint="offset: 0 4 15" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="-20 16 93" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 4 -13" look-at="#cam-rig"></a-image>
-	<!--B7 直播室-->
-	<a-image src="#arrow" position="-19.5 16 55" scale="1 1 1" rotation="90 90 0" checkpoint="offset: -0.5 4 -15" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="-20.5 16 25" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0.5 4 15" look-at="#cam-rig"></a-image>
-	<!--B5-->
-	<a-image src="#arrow" position="-20 16 85" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 4 15" look-at="#cam-rig"></a-image>
-	<!--lbridge-->
-	<a-image src="#arrow" position="-20 16 33" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 4 -13" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="-20.5 16 6" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0.5 4 14" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="-6 16 20" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -14 4 0" look-at="#cam-rig"></a-image>
-	<!--B8-->
-	<a-image src="#arrow" position="-20.5 16 14.5" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0.5 4 -14.5" look-at="#cam-rig"></a-image>
-	<!--midbridge-->
-	<a-image src="#arrow" position="-15 16 20" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 15 4 0" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="15 16 22" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -15 4 -2" look-at="#cam-rig"></a-image>
-	<!--rbridge-->
-	<a-image src="#arrow" position="5 16 18" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 15 4 2" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="20.5 16 32" scale="1 1 1" rotation="90 90 0" checkpoint="offset: -0.5 4 -12" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="19.5 16 6" scale="1 1 1" rotation="90 280 0" checkpoint="offset: 0.5 4 14" look-at="#cam-rig"></a-image>
-	<!--A5-->
-	<a-image src="#arrow" position="21 16 55" scale="1 1 1" rotation="90 80 0" checkpoint="offset:-1 4 -15" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="20.5 16 28" scale="1 1 1" rotation="90 280 0" checkpoint="offset: -0.5 4 12" look-at="#cam-rig"></a-image>
-	<!--A6-->
-	<a-image src="#arrow" position="19.5 16 65" scale="1 1 1" rotation="90 265 0" checkpoint="offset: 0.5 4 10" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="20 17 81.5" scale="0.75 0.75 1" rotation="90 90" checkpoint="offset: 0 3 -6.5" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--rmidfloor2-->
-	<a-image src="#arrow" position="23 16 60" scale="1 1 1" rotation="90 -15 0" checkpoint="offset: -3 -16 -20" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="20 16 45" scale="1 1 1" rotation="90 270 0" checkpoint="offset:0 4 15" look-at="#cam-rig"></a-image>
-	<a-image src="#arrow" position="20.5 17 71.5" scale="0.75 0.75 1" rotation="90 80 0" checkpoint="offset:-0.5 3 -11.5" look-at="#cam-rig"></a-image>
-	<!--A4-->
-	<a-image src="#arrow" position="19.5 16 15" scale="1 1 1" rotation="90 100 0" checkpoint="offset: 0.5 4 -15" look-at="#cam-rig"></a-image>
-	<!--A7-->
-	<a-image src="#arrow" position="19.5 17 78.5" scale="0.75 0.75 1" rotation="90 270 0" checkpoint="offset: 0.5 3 6.5" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="20 17 92" scale="0.75 0.75 1" rotation="90 90" checkpoint="offset: 0 3 -7" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--A8-->
-	<a-image src="#arrow" position="20 17 102" scale="0.75 0.75 1" rotation="90 90 0" checkpoint="offset: 0 3 -7" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="20.2 17 88" scale="0.75 0.75 1" rotation="90 270" checkpoint="offset: -0.2 3 7" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--A9-->
-	<a-image src="#arrow" position="20 17 98" scale="0.75 0.75 1" rotation="90 270 0" checkpoint="offset: 0 3 7" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--地下室-->
-	<a-sky radius="10" src="#under0" position="0 -20 0" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#under1" position="0 -20 20" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#under2" position="0 -20 40" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#under3" position="0 -20 60" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#under4" position="0 -20 80" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#under5" position="0 -20 100" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#under6" position="0 -20 120" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#under7" position="0 -20 140" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#C01" position="20 -20 120" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#C02" position="20 -20 100" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#D02" position="-20 -20 100" rotation="0 90 0" ></a-sky>
-	<a-sky radius="10" src="#D03" position="-20 -20 80" rotation="0 90 0" ></a-sky>
-	
-	<!--under0-->
-	<a-image src="#arrow" position="-23 -3 0" scale="1 1 1" rotation="90 200 0" checkpoint="offset: 23 -17 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="23 -3 0" scale="1 1 1" rotation="90 20 0" checkpoint="offset: -23 -17 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 17" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -17" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 35" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--Lfloor-->
-	<a-image src="#arrow" position="-3 -23 0" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -17 23 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--Rfloor-->
-	<a-image src="#arrow" position="3 -23 0" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 17 23 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--under1-->
-	<a-image src="#arrow" position="0 -23 3" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 17" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 55" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--under2-->
-	<a-image src="#arrow" position="0 -23 24" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 55" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--under3-->
-	<a-image src="#arrow" position="0 -23 43" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 75" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--under4-->
-	<a-image src="#arrow" position="0 -23 63" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 95" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--under5-->
-	<a-image src="#arrow" position="0 -23 83" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 115" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--under6-->
-	<a-image src="#arrow" position="0 -23 103" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="0 -23 135" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--under7-->
-	<a-image src="#arrow" position="0 -23 124" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="-23 -3 140" scale="1 1 1" rotation="90 180 0" checkpoint="offset: 23 -17 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<a-image src="#arrow" position="23 -3 140" scale="1 1 1" rotation="90 0 0" checkpoint="offset: -23 -17 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--Lfloor-->
-	<a-image src="#arrow" position="-3 -23 140" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -17 23 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--Rfloor-->
-	<a-image src="#arrow" position="3 -23 140" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 17 23 0" look-at="#cam-rig" material="" geometry=""></a-image>
-    <!--C01-->
-	<a-image src="#arrow" position="5.2 -23 120" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--C02-->
-	<a-image src="#arrow" position="5.2 -23 100" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--D02-->
-	<a-image src="#arrow" position="-5.2 -23 100" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	<!--D02-->
-	<a-image src="#arrow" position="-5.2 -23 80" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -14.8 3 0" look-at="#cam-rig" material="" geometry=""></a-image>
-	
 	<!--相機-->
 	<a-entity id="cam-rig"
 			  	  movement-controls="controls: checkpoint"
