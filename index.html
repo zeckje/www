@@ -168,10 +168,13 @@
 				  					animation.easing: easeOutQuart"
 				  event-set__end="_target: #blink; _event: navigation-end;
 				  				  animation.to: 0">
-			<!-- 相機控制 -->
 			<a-entity progressive-controls >
 				<a-camera>
-					<a-image id="blink" src="#black" cursor="fuse:true; fuseTimeout:1500" position="0 0 -0.3" opacity="0" height="100%" width="100%">
+				<a-entity cursor="fuse:true; fuseTimeout:1500"  position="0 0 -1"
+					  geometry="primitive: sphere; radius: 0.005"
+					  material="color: #000000; shader: flat; opacity: 0">
+					  </a-entity>
+					<a-image id="blink" src="#black" position="0 0 -0.3" opacity="0" height="100%" width="100%">
 					</a-image>
 				</a-camera>
 			</a-entity>
