@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+
+<a-scene>
+	<a-assets>
+	<!-- <img id="" src="img/1F/"> -->
+	<!-- 球形圖1F -->
+	<img id="maindoor" src="img/1F/maindoor.jpg" >
+	<img id="frontdoor" src="img/1F/frontdoor.jpg" >
+	<img id="leftfloor" src="img/1F/leftfloor.jpg">
+	<img id="grocerystore" src="img/1F/grocerystore.jpg">
+	<img id="grocerystore1" src="img/1F/grocerystore1.jpg">
+	<img id="B4" src="img/1F/B4.jpg">
+	<img id="lmidfloor" src="img/1F/lmidfloor.jpg">
+	<img id="B3" src="img/1F/B3.jpg">
+	<img id="B2" src="img/1F/B2.jpg">
+	<img id="B1" src="img/1F/B1.jpg">
+	<img id="lbackdoor" src="img/1F/lbackdoor.jpg">
+	<img id="backdoor" src="img/1F/backdoor.jpg">
+	<img id="rbackdoor" src="img/1F/rbackdoor.jpg">
+	<img id="A3" src="img/1F/A3.jpg">
+	<img id="A3-1" src="img/1F/A31.jpg">
+	<img id="A2b" src="img/1F/A2b.jpg">
+	<img id="A2b-1" src="img/1F/A2b1.jpg">
+	<img id="A2" src="img/1F/A2.jpg">
+	<img id="A2-1" src="img/1F/A21.jpg">
+	<img id="A2-2" src="img/1F/A22.jpg">
+	<img id="rmidfloor" src="img/1F/rmidfloor.jpg">
+	<img id="A1" src="img/1F/A1.jpg">
+	<img id="A1-1" src="img/1F/A11.jpg">
+	<img id="midgallery" src="img/1F/midgallery.jpg">
+	<img id="rightfloor" src="img/1F/rightfloor.jpg">
+	<!--箭頭-->
+	<img id="arrow" src="img/png/arrow.png">
+	<!--轉場-->
+	<img id="black" src="img/png/black.png">
+	</a-assets>
+	<!-- <a-sky radius="10" src="#" position="" rotation="0 90 0" ></a-sky> -->
+	<!-- 1F -->
+	<a-sky radius="10" src="#maindoor" position="-20 0 -40" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#frontdoor" position="-30 0 -57" rotation="0 90 0" ></a-sky>
+	<a-sky radius="10" src="#leftfloor" position="-40 0 -40" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#grocerystore" position="-40 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#B4" position="-40 0 0" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#lmidfloor" position="-40 0 20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#B3" position="-40 0 40" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#B2" position="-40 0 60" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#B1" position="-40 0 80" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#lbackdoor" position="-40 0 100" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#backdoor" position="-20 0 100" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#rbackdoor" position="0 0 100" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A3" position="0 0 80" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A3-1" position="20 0 80" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A2b" position="0 0 60" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A2b-1" position="20 0 60" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A2-2" position="20 0 40" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A2" position="20 0 20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A2-1" position="0 0 20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#rmidfloor" position="0 0 0" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A1" position="0 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#A1-1" position="20 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#midgallery" position="-20 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#rightfloor" position="0 0 -40" rotation="0 270 0" ></a-sky>
+	<!--箭頭-->
+	<!--#leftfloor-->
+	<a-image src="#arrow" position="-6.5 -3 3" scale="1 1 1" rotation="90 -160 0" checkpoint="offset: -13.5 3 -3"></a-image>
+	<!-- <a-image src="#arrow" position="-17 -3 -1.7" scale="1 1 1" rotation="90 30 0" checkpoint="offset: 17 3 1.7" look-at="#cam-rig"></a-image> -->
+	
+	<!--#frontdoor-->
+	<a-image src="#arrow" position="-25.1 -3 -46.5" scale="1 1 1" rotation="90 130 0" checkpoint="offset: -4.9 3 -10.5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-25.5 -3 -52" scale"1 1 1" rotation="90 -50 0" checkpoint="offset: 5.5 3 12" look-at="#cam-rig"></a-image>
+	<!--#rightfloor-->
+	<a-image src="#arrow" position="-14 -3 -36" scale="1 1 1" rotation="90 -12 0" checkpoint="offset: 14 3 -4" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-3 -3 -42.5" scale="1 1 1" rotation="90 160 0" checkpoint="offset: -17 3 2.5" look-at="#cam-rig"></a-image>
+	<!--grocerystore-->
+	<a-image src="#arrow" position="-25 -3 -32.5" scale="1 1 1" rotation="90 -80 0" checkpoint="offset: -15 3 12.5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-40 -3 -35" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 15" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-41.5 -3 -28" scale="1 1 1" rotation="90 100 0" checkpoint="offset: 1.5 3 -12" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-25 -3 -19.5" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -15 3 -0.5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-40.5 -3 -9" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0.5 3 -11" look-at="#cam-rig"></a-image>
+	<!--A1-->
+	<a-image src="#arrow" position="-16 -3 -32" scale="1 1 1" rotation="90 -100 0" checkpoint="offset: 16 3 12" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="0 -3 -28" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -12" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="0 -3 -34" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 14" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="13.5 -3 -22" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -13.5 3 2" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-15 -3 -17" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 15 3 -3" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-0.5 -3 -7" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0.5 3 -13" look-at="#cam-rig"></a-image>
+	<!--A1-1-->
+	<a-image src="#arrow" position="3 -3 -20" scale="1 1 1" rotation="90 -2.5 0" checkpoint="offset: 17 3 0" look-at="#cam-rig"></a-image>
+	<!--A2-->
+	<a-image src="#arrow" position="0.4 -3 4.5" scale="1 1 1" rotation="90 280 0" checkpoint="offset: -0.4 3 15.5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="0.5 -3 -15" scale="1 1 1" rotation="90 -80 0" checkpoint="offset: -0.5 3 15" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-33 -3 21" scale="1 1 1" rotation="90 -5 0" checkpoint="offset: 33 3 -1" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-1 -3 54" scale="1 1 1" rotation="90 100 0" checkpoint="offset: 1 3 -34" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="13 -3 19.4" scale="1 1 1" rotation="90 190 0" checkpoint="offset: -13 3 0.6" look-at="#cam-rig"></a-image>
+	<!--A2b-->
+	<a-image src="#arrow" position="-35 -3 58.5" scale="1 1 1" rotation="90 10 0" checkpoint="offset: 35 3 1.5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="0.3 -3 27" scale="1 1 1" rotation="90 280 0" checkpoint="offset: -0.3 3 33" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-1.4 -3 72" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 1.4 3 -12" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="15 -3 61" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -15 3 -1" look-at="#cam-rig"></a-image>
+	<!--中廊-->
+	<a-image src="#arrow" position="-3 -3 -25" scale="1 1 1" rotation="90 125 0" checkpoint="offset: -17 3 5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-35 -3 -21" scale="1 1 1" rotation="90 10 0" checkpoint="offset: 15 3 1" look-at="#cam-rig"></a-image>
+	<!--B4-->
+	<a-image src="#arrow" position="-39.5 -3 -15" scale="1 1 1" rotation="90 -80 0" checkpoint="offset: -0.5 3 15" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-40.6 -3 12" scale="1 1 1" rotation="90 101 0" checkpoint="offset: 0.6 3 -12" look-at="#cam-rig"></a-image>
+	<!--rmidfloor 綠色上樓未寫-->
+	<a-image src="#arrow" position="-33 -3 1" scale="1 1 1" rotation="90 -20 0" checkpoint="offset: 33 3 -1" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-33 -3 18" scale="1 1 1" rotation="90 20 0" checkpoint="offset: 33 3 -18" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="3 -3 0" scale="1 1 1" rotation="90 10 0" link="href:2rmidfloor.html" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-0.2 -3 14" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0.2 3 -14" look-at="#cam-rig"></a-image>
+	<!--lmidfloor-->
+	<a-image src="#arrow" position="-40 -3 4" scale="1 1 1" rotation="90 -79 0" checkpoint="offset: 0 3 16" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-40.7 -3 33" scale="1 1 1" rotation="90 99 0" checkpoint="offset: 0.7 3 -13" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-8 -3 17.5" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -32 3 2.5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-43.3 -3 20" scale="1 1 1" rotation="90 190 0" link="href:2Flmidfloor.html" look-at="#cam-rig"></a-image>
+	<!--B3-->
+	<a-image src="#arrow" position="-39.6 -3 25" scale="1 1 1" rotation="90 -81 0" checkpoint="offset: -0.4 3 15" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-41 -3 53" scale="1 1 1" rotation="90 100 0" checkpoint="offset: 1 3 -13" look-at="#cam-rig"></a-image>
+	<!--B2-->
+	<a-image src="#arrow" position="-39.6 -3 44" scale="1 1 1" rotation="90 -80 0" checkpoint="offset: -0.4 3 16" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-39.7 -3 71" scale="1 1 1" rotation="90 90 0" checkpoint="offset: -0.3 3 -11" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-6 -3 61.5" scale="1 1 1" rotation="90 190 0" checkpoint="offset: -34 3 -1.5" look-at="#cam-rig"></a-image>
+	<!--B1-->
+	<a-image src="#arrow" position="-39.5 -3 64" scale="1 1 1" rotation="90 -80 0" checkpoint="offset: -0.5 3 16" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-39.8 -3 92" scale="1 1 1" rotation="90 90 0" checkpoint="offset: -0.2 3 -12" look-at="#cam-rig"></a-image>
+	<!--lbackdoor-->
+	<a-image src="#arrow" position="-40.2 -3 84" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0.2 3 16" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-25 -3 100" scale="1 1 1" rotation="90 190 0" checkpoint="offset: -15 3 0" look-at="#cam-rig"></a-image>
+	<!--backdoor-->
+	<a-image src="#arrow" position="-36 -3 100" scale="1 1 1" rotation="90 -5 0" checkpoint="offset: 16 3 0" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-5 -3 100" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -15 3 0" look-at="#cam-rig"></a-image>
+	<!--rbackdoor-->
+	<a-image src="#arrow" position="-15 -3 100" scale="1 1 1" rotation="90 0 0" checkpoint="offset: 15 3 0" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="0.3 -3 83.5" scale="1 1 1" rotation="90 280 0" checkpoint="offset: -0.3 3 16.5" look-at="#cam-rig"></a-image>
+	<!--A3-->
+	<a-image src="#arrow" position="0.9 -3 65.5" scale="1 1 1" rotation="90 280 0" checkpoint="offset: -0.9 3 14.5" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="-1 -3 93" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 1 3 -13" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="13.4 -3 83.5" scale="1 1 1" rotation="90 180 0" checkpoint="offset: -13.4 3 -3.5" look-at="#cam-rig"></a-image>
+	<!--A3-1-->
+	<a-image src="#arrow" position="2.6 -3 79.4" scale="1 1 1" rotation="90 10 0" checkpoint="offset: 17.4 3 0.6" look-at="#cam-rig"></a-image>
+	<!--A2-1-->
+	<a-image src="#arrow" position="2.9 -3 20" scale="1 1 1" rotation="90 5 0" checkpoint="offset: 17.1 3 0" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="20 -3 36" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -16" look-at="#cam-rig"></a-image>
+	<!--A2-2-->
+	<a-image src="#arrow" position="20.5 -3 24" scale="1 1 1" rotation="90 290 0" checkpoint="offset: -0.5 3 16" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="20 -3 55" scale="1 1 1" rotation="90 90 0" checkpoint="offset: 0 3 -15" look-at="#cam-rig"></a-image>
+	<!--A2b-1-->
+	<a-image src="#arrow" position="20 -3 44" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig"></a-image>
+	<a-image src="#arrow" position="3.5 -3.6 60.4" scale="1 1 1" rotation="90 10 0" checkpoint="offset: 16.5 3.6 -0.4" look-at="#cam-rig"></a-image>
+	<!--相機-->
+	<a-entity id="cam-rig"
+			  	  movement-controls="controls: checkpoint"
+				  checkpoint-controls="mode: animate; animateSpeed: 25.0"
+				  event-set__start="_target: #blink; _event: navigation-start;
+				  					animation.property: opacity;
+				  					animation.to: 1;
+				  					animation.dur: 250;
+				  					animation.easing: easeOutQuart"
+				  event-set__end="_target: #blink; _event: navigation-end;
+				  				  animation.to: 0">
+			<!-- 相機控制 -->
+			<a-entity progressive-controls >
+				<a-camera>
+					<a-image id="blink" src="#black" cursor="fuse:true; fuseTimeout:1500" position="0 0 -0.3" opacity="0" height="100%" width="100%">
+					</a-image>
+				</a-camera>
+			</a-entity>
+		</a-entity>
+	
+</a-scene>
+</body>
+</html>
