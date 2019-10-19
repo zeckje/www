@@ -6,6 +6,7 @@
 	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<script src="music.js"></script>
 </head>
 <body>
 
@@ -42,6 +43,16 @@
 	<img id="arrow" src="img/png/arrow.png">
 	<!--轉場-->
 	<img id="black" src="img/png/black.png">
+	<!--音效圖-->
+	<img id="muplay" src="img/png/play.png">
+	<img id="mustop" src="img/png/stop.png">
+	<img id="mupause" src="img/png/pause.png">
+	<img id="cnword" src="img/png/chinese.png">
+	<img id="enword" src="img/png/english.png">
+	<img id="hid" src="hidden.png">
+	<!--音效-->
+	<audio id="A1cn" src="sound/A1cn.m4a"></audio>
+	
 	</a-assets>
 	<!-- <a-sky radius="10" src="#" position="" rotation="0 90 0" ></a-sky> -->
 	<!-- 1F -->
@@ -157,6 +168,12 @@
 	<!--A2b-1-->
 	<a-image src="#arrow" position="40 -3 84" scale="1 1 1" rotation="90 270 0" checkpoint="offset: 0 3 16" look-at="#cam-rig"></a-image>
 	<a-image src="#arrow" position="23.5 -3.6 100.4" scale="1 1 1" rotation="90 10 0" checkpoint="offset: 16.5 3.6 -0.4" look-at="#cam-rig"></a-image>
+	<!--播放器-->
+	<a-entity id="test1" position="0 0 -2" rotation="0 180 0" scale="0.5 0.5 0.5" sound="src: #A1cn">	
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#muplay" position="-1.5 -1.5 0" play ></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#mupause" position="0 -1.5 0" pause ></a-entity>
+		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#mustop" position="1.5 -1.5 0" stop ></a-entity>	
+	</a-entity>
 	<!--相機-->
 	<a-entity id="cam-rig"
 			  	  movement-controls="controls: checkpoint"
