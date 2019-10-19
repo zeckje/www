@@ -15,10 +15,8 @@
 			init: function () {
 				var entity = document.querySelector('#test');
 				this.el.addEventListener('click', function () {
-					entity.components.sound.playSound();
-					  context.resume().then(() => {
+					entity.components.sound.playSound();	 
     console.log('Playback resumed successfully');
-  });
 				});
 			}
 		});
@@ -27,9 +25,7 @@
 				var entity = document.querySelector('#test');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.pauseSound();
-					context.resume().then(() => {
-    console.log('Playback resumed successfully');
-  });
+					console.log('pause resumed successfully');
 				});
 			}
 		});
@@ -38,9 +34,7 @@
 				var entity = document.querySelector('#test');
 				this.el.addEventListener('click', function () {
 					entity.components.sound.stopSound();
-					context.resume().then(() => {
-    console.log('Playback resumed successfully');
-  });
+					console.log('stop resumed successfully');
 				});
 			}
 		});
