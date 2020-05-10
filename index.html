@@ -289,7 +289,15 @@
 			</a-entity>
 		</a-entity>
 		<a-entity gearvr-controls></a-entity>
-		<a-entity gearvr-controls="hand:right"> </a-entity>
+		<!--<a-entity gearvr-controls="hand:right" checkpoint-controls="mode: animate; animateSpeed: 25.0"
+				  event-set__start="_target: #blink; _event: navigation-start;
+				  					animation.property: opacity;
+				  					animation.to: 1;
+				  					animation.dur: 250;
+				  					animation.easing: easeOutQuart"
+				  event-set__end="_target: #blink; _event: navigation-end;
+				  				  animation.to: 0"> </a-entity>-->
+		<a-entity laser-controls raycaster="showLine:true;" line="color:#eee; opacity:0.33;"></a-entity>
 	
 </a-scene>
 </body>
