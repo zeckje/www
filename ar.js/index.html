@@ -7,10 +7,12 @@
   </head>
   
   <body style="margin: 0px; overflow: hidden">
-    <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-      <!-- <assets>
-        <video id="vid" src="https://youtu.be/obUh1SjF0KQ"></video>
-      </assets>  -->  <!-- <a-video width="1.5" 
+    <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: ture;">
+      
+      <a-assets>
+        <a-asset-item id="test" src="3d/k2.fbx"></a-asset-item>
+      </a-assets>
+        <!-- <a-video width="1.5" 
                  height="1" 
                  rotation="90 0 0" 
                  position="0 0 0"  
@@ -33,12 +35,13 @@
       <a-marker-camera type="pattern" url='marker/p2.patt'></a-marker>
       <a-marker-camera type="pattern" url='marker/p3.patt'></a-marker>0 -->
 
-      <a-marker type="pattern" url='test/gray1.patt'>
-        <a-box color="yellow" ></a-box> 
+      <a-marker type="pattern" url='test/gray2.patt'>
+        <a-entity fbx-model="##test">
+            </a-entity>
       </a-marker>
 
 
-      <a-marker type="pattern" url='test/gray2.patt'>
+      <a-marker type="pattern" url='test/gray1.patt'>
         <a-box color="red" ></a-box> 
       </a-marker>
 
