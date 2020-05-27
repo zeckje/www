@@ -4,14 +4,11 @@
     <title>testar.js</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="script/arjs.js"></script>
   </head>
   
   <body style="margin: 0px; overflow: hidden">
     <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: ture;">
-      
-      <a-assets>
-        <a-asset-item id="test" src="3d/k2.fbx"></a-asset-item>
-      </a-assets>
         <!-- <a-video width="1.5" 
                  height="1" 
                  rotation="90 0 0" 
@@ -36,7 +33,7 @@
       <a-marker-camera type="pattern" url='marker/p3.patt'></a-marker>0 -->
 
       <a-marker type="pattern" url='test/gray2.patt'>
-        <a-entity fbx-model="##test">
+        <a-entity fbx-model="src: url(/3d/k2.fbx);" >>
             </a-entity>
       </a-marker>
 
