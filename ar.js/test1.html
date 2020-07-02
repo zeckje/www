@@ -1,13 +1,13 @@
-<!doctype HTML>
+<!doctype>
 <html>
     <head>
-        <script src='https://aframe.io/releases/0.9.1/aframe.min.js'></script>
+        <script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="script/arjs.js"></script>
     </head>
     
-    <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs='sourceType: webcam;'; vr-mode-ui="enabled: false">
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs='sourceType: webcam;'; vr-mode-ui="enabled: flase">
 
         <a-assets>
             <a-asset-item id='test-glb' src='glb_test2.glb'></a-asset-item>
