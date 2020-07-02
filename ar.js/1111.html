@@ -8,47 +8,9 @@
   </head>
   
   <body style="margin: 0px; overflow: hidden">
-    <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: ture;">
-        <!-- <a-video width="1.5" 
-                 height="1" 
-                 rotation="90 0 0" 
-                 position="0 0 0"  
-                 src="vid"></a-video> pattern-marker  sourceType: webcam;-->     
-      <a-marker type="pattern" url='marker/q1.patt'>
-        <a-box color="green" ></a-box> 
-        
-      </a-marker> 
-      <!-- <a-marker type="pattern" url='marker/p1.patt'>
-        <a-box color="blue" ></a-box> 
-      </a-marker>  -->
-      <!-- <a-marker type="pattern" url='marker/p2.patt'>
-        <a-box color="green" ></a-box> 
-      </a-marker>
-      <a-marker type="pattern" url='marker/p3.patt'>
-        <a-box color="white" ></a-box> 
-      </a-marker>  -->
-      <!-- <a-marker-camera type="pattern" url='marker/q1.patt'> <a-box color="blue" ></a-box> </a-marker> -->
-      <!-- <a-marker-camera type="pattern" url='marker/p1.patt'></a-marker>
-      <a-marker-camera type="pattern" url='marker/p2.patt'></a-marker>
-      <a-marker-camera type="pattern" url='marker/p3.patt'></a-marker>0 -->
-
-      <a-marker type="pattern" url='marker/gray2.patt'>
-        <a-box color="red" ></a-box> 
-      </a-marker>
-
-
-      <a-marker type="pattern" url='marker/gray1.patt'>
-        <a-box color="red" ></a-box> 
-      </a-marker>
-
-      <a-marker type="pattern" url='marker/gray3.patt'>
-        <a-box color="white" ></a-box> 
-      </a-marker>
-
-      <a-marker type="pattern" url='marker/d1.patt'>
-        <a-box color="blue" ></a-box> 
-      </a-marker>
-
+        <a-assets>
+            <a-asset-item id="test-glb" src="glb_test2.glb"></a-asset-item>
+        </a-assets>
 
       <a-entity camera></a-entity>
     </a-scene>
