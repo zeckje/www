@@ -15,9 +15,9 @@
 			<a-animation attribute="rotation" to="0 189 0" repeat="indefinite" begin="mouseenter" end="mouseleave" easing="linear"></a-animation>
 		</a-entity>
 		<a-entity camera look-controls position="0 0 0">
-			<a-cursor color="cyan" >
-        </a-cursor>
-      </a-entity>
+			<a-entity cursor="rayOrigin: mouse"></a-entity>
+		</a-entity>
+		<a-entity laser-controls="hand:right"></a-entity>
     </a-scene>
   </body>
 </html>
