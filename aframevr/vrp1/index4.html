@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<script>
+	
+</script>
+<body>
+<a-scene vr-mode-ui="enabled: false">
+	<a-assets vr-mode-ui="enabled: false;">
+	<!--箭頭-->
+	<img id="arrow" src="img/png/arrow.png">
+	<!--環境圖-->
+	<img id="Area02_008" src="img/Area02/Area02_008.jpg">
+	</a-assets>
+	<!--Area01-->
+	<!--sky -->
+	<a-sky id="s1" radius="10" src="#Area02_008" position="0 0 0" rotation="0 270 0" ></a-sky>
+	<a-plane id="guildarrow" link="href: index5.html"  src="#arrow" material="transparent: true" geometry="" position="5 -3 -1" rotation="-90 68 0" scale=""></a-plane>
+
+	<a-plane id="guildarrow" link="href: index8.html" src="#arrow" material="transparent: true" geometry="" position="-5.14999 -3 -0.47395" rotation="-90.00021045914971 81.86592864167741 0" scale=""></a-plane>
+
+	<a-plane id="guildarrow" link="href: index9.html" src="#arrow" material="transparent: true" geometry="" position="-5.14999 -3 2.24797" rotation="-89.99963750135457 -176.9849440425259 0" scale=""></a-plane>
+
+	<a-plane id="guildarrow" link="href: index3.html" src="#arrow" material="transparent: true" geometry="" position="5 -3 0.97608" rotation="-89.99963750135457 12.580434307687485 0" scale=""></a-plane>
+
+
+	
+    <!-- 相機 -->
+	<a-entity id="cam-rig"
+			  	  movement-controls="controls: checkpoint"
+				  checkpoint-controls="mode: animate; animateSpeed: 15.0">
+		<a-camera rotation="0 0 0" >
+			<a-entity cursor="rayOrigin: mouse;"  mouseCursorStylesEnabled="true" position="0 0 -1"></a-entity>
+		</a-camera>
+		<a-entity laser-controls="hand:right"></a-entity>
+	</a-entity>
+		
+	
+</a-scene>
+</body>
+</html>

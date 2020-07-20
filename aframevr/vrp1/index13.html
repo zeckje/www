@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<script>
+	
+</script>
+<body>
+<a-scene vr-mode-ui="enabled: false">
+	<a-assets vr-mode-ui="enabled: false;">
+	<!--箭頭-->
+	<img id="arrow" src="img/png/arrow.png">
+	<!--環境圖-->
+	<img id="Area03_011" src="img/Area03/Area03_011.jpg">
+	</a-assets>
+	<!--Area01-->
+	<!--sky -->
+	<a-sky id="s1" radius="10" src="#Area03_011" position="0 0 0" rotation="0 270 0" ></a-sky>
+	
+	<a-plane id="guildarrow" link="href: index12.html" src="#arrow" material="transparent: true" geometry="" position="-0.9247 -3 7.59747" rotation="-89.99963750135457 -130.3461795188769 0" scale=""></a-plane>
+
+	<a-plane id="guildarrow" link="href: index16.html" src="#arrow" material="transparent: true" geometry="" position="4.45547 -3 1.13222" rotation="-89.99963750135457 5.2328235429298084 0" scale=""></a-plane>
+
+
+	
+
+	
+
+
+	
+    <!-- 相機 -->
+	<a-entity id="cam-rig"
+			  	  movement-controls="controls: checkpoint"
+				  checkpoint-controls="mode: animate; animateSpeed: 15.0">
+		<a-camera rotation="0 0 0" >
+			<a-entity cursor="rayOrigin: mouse;"  mouseCursorStylesEnabled="true" position="0 0 -1"></a-entity>
+		</a-camera>
+		<a-entity laser-controls="hand:right"></a-entity>
+	</a-entity>
+		
+	
+</a-scene>
+</body>
+</html>

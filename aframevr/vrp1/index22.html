@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<script>
+	
+</script>
+<body>
+<a-scene vr-mode-ui="enabled: false">
+	<a-assets vr-mode-ui="enabled: false;">
+	<!--箭頭-->
+	<img id="arrow" src="img/png/arrow.png">
+	<!--環境圖-->
+	<img id="Area04_008" src="img/Area04/Area04_008.jpg">
+	</a-assets>
+	<!--Area01-->
+	<!--sky -->
+	<a-sky id="s1" radius="10" src="#Area04_008" position="0 0 0" rotation="0 270 0" ></a-sky>
+	
+	<a-plane id="guildarrow" link="href: index19.html" src="#arrow" material="transparent: true" geometry="" position="-4.93844 -3 0.20452" rotation="-89.99963750135457 178.8585160326037 0" scale=""></a-plane>
+
+
+	<a-plane id="guildarrow" link="href: index21.html" src="#arrow" material="transparent: true" geometry="" position="-1.02157 -3 4.61356" rotation="-89.99963750135457 -128.23368412822956 0" scale=""></a-plane>
+
+	<a-plane id="guildarrow" link="href: index23.html" src="#arrow" material="transparent: true" geometry="" position="2.68582 -3 -1.57456" rotation="-89.99963750135457 59.24211714314173 0" scale=""></a-plane>
+
+	<a-plane id="guildarrow" link="href: index24.html" src="#arrow" material="transparent: true" geometry="" position="4.8476 -3 0.19792" rotation="-89.99963750135457 9.779816605088023 0" scale=""></a-plane>
+
+
+
+	
+
+	
+
+
+	
+    <!-- 相機 -->
+	<a-entity id="cam-rig"
+			  	  movement-controls="controls: checkpoint"
+				  checkpoint-controls="mode: animate; animateSpeed: 15.0">
+		<a-camera rotation="0 0 0" >
+			<a-entity cursor="rayOrigin: mouse;"  mouseCursorStylesEnabled="true" position="0 0 -1"></a-entity>
+		</a-camera>
+		<a-entity laser-controls="hand:right"></a-entity>
+	</a-entity>
+		
+	
+</a-scene>
+</body>
+</html>
