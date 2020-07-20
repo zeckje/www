@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+	<script src="js/musjs.js"></script>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<a-scene>
+	<a-assets vr-mode-ui="enabled: false;">
+	<!--箭頭-->
+	<img id="arrow" src="img/png/arrow.png">
+	<!--轉場-->
+	<img id="black" src="img/png/black.png">
+	<!--環境圖---->
+	<img id="Area01_001" src="img/Area01/Area01_001.jpg">
+	<img id="Area01_002" src="img/Area01/Area01_002.jpg">
+	<img id="Area01_003" src="img/Area01/Area01_003.jpg">
+	<img id="Area01_004" src="img/Area01/Area01_004.jpg">
+	<img id="Area01_005" src="img/Area01/Area01_005.jpg">
+	<img id="Area01_006" src="img/Area01/Area01_006.jpg">
+	<img id="Area01_007" src="img/Area01/Area01_007.jpg">
+	<img id="Area01_008" src="img/Area01/Area01_008.jpg">
+	<img id="Area01_009" src="img/Area01/Area01_009.jpg">
+	<img id="Area01_010" src="img/Area01/Area01_0010.jpg">
+	<img id="Area01_011" src="img/Area01/Area01_0011.jpg">
+	<img id="Area01_012" src="img/Area01/Area01_0012.jpg">
+	<img id="Area01_013" src="img/Area01/Area01_0013.jpg">
+	<img id="Area01_014" src="img/Area01/Area01_0014.jpg">
+	<img id="Area01_015" src="img/Area01/Area01_0015.jpg">
+	<img id="Area01_016" src="img/Area01/Area01_0016.jpg">
+	<img id="Area01_017" src="img/Area01/Area01_0017.jpg">
+	<img id="Area01_018" src="img/Area01/Area01_0018.jpg">
+	</a-assets>
+	<!--Area01-->
+	<a-sky radius="10" src="#Area01_001" position="0 0 0" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_002" position="0 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_003" position="20 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_004" position="20 0 0" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_005" position="40 0 0" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_006" position="40 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_007" position="40 0 -40" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_008" position="40 0 -60" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_009" position="40 0 -80" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_010" position="60 0 -80" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_011" position="60 0 -60" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_012" position="60 0 -20" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_013" position="80 0 -80" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_014" position="100 0 -80" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_015" position="100 0 -60" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_016" position="100 0 -40" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_017" position="80 0 0" rotation="0 270 0" ></a-sky>
+	<a-sky radius="10" src="#Area01_018" position="100 0 20" rotation="0 270 0" ></a-sky>
+	
+	
+
+	<a-image id="002" src="#arrow" position="1 -3 -6.5" scale="1 1 1" rotation="-90 70 0" checkpoint="offset: -1 3 -13.5" look-at="#cam-rig"></a-image>
+	<a-image id="003" src="#arrow" position="8 -3 -20" scale="1 1 1" rotation="-90 0 0" checkpoint="offset: 12 3 0" look-at="#cam-rig"></a-image>
+
+    <!-- 相機 -->
+	<a-entity id="cam-rig"
+			  	  movement-controls="controls: checkpoint"
+				  checkpoint-controls="mode: animate; animateSpeed: 20.0"
+				  event-set__start="_target: #blink; _event: navigation-start;
+				  					animation.property: opacity;
+				  					animation.to: 1;
+				  					animation.dur: 250;
+				  					animation.easing: easeOutQuart"
+				  event-set__end="_target: #blink; _event: navigation-end;
+				  				  animation.to: 0">
+			<!-- <a-entity progressive-controls > -->
+				<!-- <a-camera rotation="0 180 0"> -->
+				<!-- <a-entity cursor="fuse:true; fuseTimeout:1500"  position="0 0 -1" -->
+					  <!-- geometry="primitive: sphere; radius: 0.005" -->
+					  <!-- material="color: #000000; shader: flat; opacity: 0"> -->
+					  <!-- </a-entity> -->
+					<!-- <a-image id="blink" src="#black" position="0 0 -0.3" opacity="0" height="100%" width="100%"> -->
+					<!-- </a-image> -->
+				<!-- </a-camera> -->
+			<!-- </a-entity> -->
+			
+		<a-entity id="camera" position="0 0 0" camera look-controls wasd-controls>
+			<a-entity cursor="rayOrigin: mouse"></a-entity>
+		</a-entity>
+		<a-entity laser-controls="hand:right"></a-entity>
+	</a-entity>
+		
+	
+</a-scene>
+</body>
+</html>
+
+ <!-- <a-entity id="camera" position="0 1.6 0" camera look-controls="reverseMouseDrag:true" >
+	 
+        <a-entity cursor="rayOrigin: mouse"></a-entity>
+      </a-entity>
+      
+      <a-entity laser-controls="hand:right"></a-entity> -->
