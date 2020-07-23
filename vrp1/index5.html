@@ -1,23 +1,122 @@
 <!doctype html>
 <html>
 <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160986184-1"></script>
+   <script>
+    window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-160986184-1');
+   </script>
+
 	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
 	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+	<script src="public/js/jquery-3.4.1.js"></script>
+	<script src="boo/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="boo/css/bootstrap.min.css">
+	
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 </head>
 <script>
-	
+	$(document).ready(function() {
+// Gets the video src from the data-src on each button
+var $videoSrc;  
+$('.video-btn').click(function() {
+    $videoSrc = $(this).data( "src" );
+});
+console.log($videoSrc);  
+// when the modal is opened autoplay it  
+$('#myModal').on('shown.bs.modal', function (e) {   
+// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+})
+// stop playing the youtube video when I close the modal
+$('#myModal').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").attr('src',$videoSrc); 
+}) 
+// document ready  
+});
+	AFRAME.registerComponent('mouseflow2', {
+  init: function() {
+    this.el.addEventListener('mouseenter', (e) => {
+      this.el.setAttribute('src', '#ye07'); 
+    })
+    this.el.addEventListener('mouseleave', (e) => {
+      this.el.setAttribute('src', '#wh07');	 
+    })
+  }
+})
+	AFRAME.registerComponent('mouseflow1', {
+  init: function() {
+    this.el.addEventListener('mouseenter', (e) => {
+      this.el.setAttribute('src', '#ye06'); 
+    })
+    this.el.addEventListener('mouseleave', (e) => {
+      this.el.setAttribute('src', '#wh06');	 
+    })
+  }
+})
+	AFRAME.registerComponent('mouseflow', {
+  init: function() {
+    this.el.addEventListener('mouseenter', (e) => {
+      this.el.setAttribute('src', '#ye04'); 
+    })
+    this.el.addEventListener('mouseleave', (e) => {
+      this.el.setAttribute('src', '#wh04');	 
+    })
+  }
+})
+	AFRAME.registerComponent('mouseflow4', {
+  init: function() {
+    this.el.addEventListener('mouseenter', (e) => {
+      this.el.setAttribute('src', '#ye09'); 
+    })
+    this.el.addEventListener('mouseleave', (e) => {
+      this.el.setAttribute('src', '#wh09');	 
+    })
+  }
+})
 </script>
 <body>
+	<div  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document" >
+      <div class="modal-content" >
+       <div class="modal-body" >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>        
+        <!-- 16:9 aspect ratio -->
+         <div class="embed-responsive embed-responsive-16by9">
+          <iframe  class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+         </div>            
+       </div>
+      </div>
+     </div>
+   </div>
 <a-scene vr-mode-ui="enabled: false">
 	<a-assets vr-mode-ui="enabled: false;">
 	<!--箭頭-->
 	<img id="arrow" src="img/png/arrow.png">
 	<!--環境圖-->
 	<img id="Area02_002" src="img/Area02/Area02_002.jpg">
+
+	<img id="ye04"  src="img/text/ye04.png" crossorigin="anonymous">
+	<img id="wh04"  src="img/text/wh04.png" crossorigin="anonymous">
+
+	<img id="ye06"  src="img/text/ye06.png" crossorigin="anonymous">
+	<img id="wh06"  src="img/text/wh06.png" crossorigin="anonymous">
+
+	<img id="ye07"  src="img/text/ye07.png" crossorigin="anonymous">
+	<img id="wh07"  src="img/text/wh07.png" crossorigin="anonymous">
+
+	<img id="ye09"  src="img/text/ye09.png" crossorigin="anonymous">
+	<img id="wh09"  src="img/text/wh09.png" crossorigin="anonymous">
 	</a-assets>
 	<!--Area01-->
 	<!--sky -->
@@ -28,6 +127,19 @@
 	<a-plane id="guildarrow" link="href: index4.html" src="#arrow" material="transparent: true" geometry="" position="-6.10614 -3 -3" rotation="-90.00021045914971 83.98014290571015 0" scale=""></a-plane>
 
 	<a-plane id="guildarrow" link="href: index3.html" src="#arrow" material="transparent: true" geometry="" position="-6.10614 -3 2.19501" rotation="-89.99963750135457 -79.17474587794794 0" scale=""></a-plane>
+
+	<!--/////////-->
+	  <a-entity id="text101" class="homeworld1" >
+	   <a-plane class="video-btn" data-toggle="modal" data-src="work/04.html" data-target="#myModal" id="text1002" rotation="" width="7.5" height="2" src="#wh04" material="transparent: true" geometry="" position="-0.33925 -2.93305 -2.82412" scale="0.3 0.5 0.00001" mouseflow=""></a-plane>
+
+	   <a-plane class="video-btn" data-toggle="modal" data-src="work/06.html" data-target="#myModal" id="text1002" rotation="" width="7.5" height="2" src="#wh06" material="transparent: true" geometry="" position="-0.15019 -2.47067 -6.93937" scale="0.2 0.3 0.00001" mouseflow1=""></a-plane>
+	   
+
+	   <a-plane class="video-btn" data-toggle="modal" data-src="work/07.html" data-target="#myModal" id="text1002" rotation="0 -90.00021045914971 -1.7" width="7.5" height="2" src="#wh07" material="transparent: true" geometry="" position="6.16952 -2.74515 3.63996" scale="0.25 0.45 0.00001" mouseflow2=""></a-plane>
+
+
+	  <a-plane class="video-btn" data-toggle="modal" data-src="work/09.html" data-target="#myModal" id="text1002" rotation="0 270 0" width="7.5" height="2" src="#wh09" material="transparent: true" geometry="" position="8.37844 -3.14429 -0.52181" scale="0.25 0.35 0.00001" mouseflow4=""></a-plane>
+	  </a-entity>
 
 
 	

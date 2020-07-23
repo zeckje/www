@@ -1,23 +1,108 @@
 <!doctype html>
 <html>
 <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160986184-1"></script>
+   <script>
+    window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'UA-160986184-1');
+   </script>
+
 	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
 	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
 	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+	<script src="public/js/jquery-3.4.1.js"></script>
+	<script src="boo/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="boo/css/bootstrap.min.css">
+	
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 </head>
 <script>
-	
+	$(document).ready(function() {
+// Gets the video src from the data-src on each button
+var $videoSrc;  
+$('.video-btn').click(function() {
+    $videoSrc = $(this).data( "src" );
+});
+console.log($videoSrc);  
+// when the modal is opened autoplay it  
+$('#myModal').on('shown.bs.modal', function (e) {   
+// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+})
+// stop playing the youtube video when I close the modal
+$('#myModal').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").attr('src',$videoSrc); 
+}) 
+// document ready  
+});
+	AFRAME.registerComponent('mouseflow', {
+  init: function() {
+    this.el.addEventListener('mouseenter', (e) => {
+      this.el.setAttribute('src', '#ye42'); 
+    })
+    this.el.addEventListener('mouseleave', (e) => {
+      this.el.setAttribute('src', '#wh42');	 
+    })
+  }
+})
+	AFRAME.registerComponent('mouseflow1', {
+  init: function() {
+    this.el.addEventListener('mouseenter', (e) => {
+      this.el.setAttribute('src', '#ye45'); 
+    })
+    this.el.addEventListener('mouseleave', (e) => {
+      this.el.setAttribute('src', '#wh45');	 
+    })
+  }
+})
+	AFRAME.registerComponent('mouseflow2', {
+  init: function() {
+    this.el.addEventListener('mouseenter', (e) => {
+      this.el.setAttribute('src', '#ye46'); 
+    })
+    this.el.addEventListener('mouseleave', (e) => {
+      this.el.setAttribute('src', '#wh46');	 
+    })
+  }
+})
 </script>
 <body>
+	<div  class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document" >
+      <div class="modal-content" >
+       <div class="modal-body" >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>        
+        <!-- 16:9 aspect ratio -->
+         <div class="embed-responsive embed-responsive-16by9">
+          <iframe  class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+         </div>            
+       </div>
+      </div>
+     </div>
+   </div>
 <a-scene vr-mode-ui="enabled: false">
 	<a-assets vr-mode-ui="enabled: false;">
 	<!--箭頭-->
 	<img id="arrow" src="img/png/arrow.png">
 	<!--環境圖-->
 	<img id="Area04_003" src="img/Area04/Area04_003.jpg">
+
+	<img id="ye42"  src="img/text/ye42.png" crossorigin="anonymous">
+	<img id="wh42"  src="img/text/wh42.png" crossorigin="anonymous">
+	<img id="ye45"  src="img/text/ye45.png" crossorigin="anonymous">
+	<img id="wh45"  src="img/text/wh45.png" crossorigin="anonymous">
+	<img id="ye46"  src="img/text/ye46.png" crossorigin="anonymous">
+	<img id="wh46"  src="img/text/wh46.png" crossorigin="anonymous">
+
 	</a-assets>
 	<!--Area01-->
 	<!--sky -->
@@ -27,7 +112,13 @@
 
 
 
-	
+	<!--/////////////////-->
+
+	<a-plane class="video-btn" data-toggle="modal" data-src="work/42.html" data-target="#myModal" id="text1002" rotation="0 180 0" width="5" height="2" src="#wh42" material="transparent: true" geometry="" position="-0.82682 -2.2676 8.92966" scale="0.4 0.4 0.00001" mouseflow=""></a-plane>
+
+	<a-plane class="video-btn" data-toggle="modal" data-src="work/45.html" data-target="#myModal" id="text1002" rotation="-7.12014652009074 -92.78249351230498 -1.2415995420484938" width="5" height="2" src="#wh45" material="transparent: true" geometry="" position="4.17217 -2.22431 2.14312" scale="0.3 0.4 0.00001" mouseflow1=""></a-plane>
+
+	<a-plane class="video-btn" data-toggle="modal" data-src="work/46.html" data-target="#myModal" id="text1003" rotation="0.002864788975654116 -88.19768523566813 -0.09167324722093172" width="5" height="2" src="#wh46" material="transparent: true" geometry="" position="3.21743 -1.47766 -1.47713" scale="0.29 0.4 0.00001" mouseflow2=""></a-plane>
 
 	
 
