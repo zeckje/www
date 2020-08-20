@@ -6,6 +6,7 @@
         <script src='https://aframe.io/releases/0.9.1/aframe.min.js'></script>
         <script src='https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js'></script>
         <script src='https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js'></script>
+        <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     </head>
     
     <body style="margin : 0px; overflow: hidden;">
@@ -16,7 +17,8 @@
         </a-assets>
 
         <a-marker  id="marker.patt" type="pattern" preset="custom" url="retest1.patt">          
-            <a-entity scale="0.5 0.5 0.5" id="animated-model" animation-mixer="loop: repeat" gltf-model="#test-glb"> </a-entity>
+            <!-- <a-entity scale="0.5 0.5 0.5" id="animated-model" animation-mixer="loop: repeat" gltf-model="#test-glb"> </a-entity> -->
+            <a-entity geometry="primitive:box;" material="shader:gif;src:url(img_5.gif);opacity:.8"></a-entity>
         </a-marker>
 		
         <a-entity camera></a-entity>
