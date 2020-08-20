@@ -1,0 +1,22 @@
+<!doctype>
+<html>
+    <head>
+        <title>123</title>
+        <meta name="viewport" content="width=device-width"> 
+        <script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>
+        <script src='https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js'></script>
+        <script src="aframe-gif-shader.js"></script>
+    </head>
+        
+    
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;debugUIEnabled: false;"; vr-mode-ui="enabled: true";>
+        <a-marker  id="marker.patt" type="pattern" preset="custom" url="retest1.patt">          
+           <a-entity rotation="-90 0 0" geometry="primitive:plane" material="shader:gif;src:url(img_5.gif);" gif="" transparent="true"></a-entity>
+        </a-marker>
+		
+        <a-entity camera></a-entity>
+		
+        </a-scene>
+    </body>
+</html>
