@@ -11,7 +11,7 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;debugUIEnabled: false;"; vr-mode-ui="enabled: true";>
         <a-asset>
-        <video id="123" src="456.mp4" autoplay loop="true"></video>
+        <video id="123" src="456.mp4" preload="auto"></video>
     </a-asset>
         <a-marker  id="marker.patt" type="pattern" preset="custom" url="retest1.patt">          
            <!-- <a-entity rotation="-90 0 0" geometry="primitive:plane" material="src:#123;" gif="" transparent="true"></a-entity> -->
